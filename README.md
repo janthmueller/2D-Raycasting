@@ -14,19 +14,19 @@
 <br />
 <div align="center">
 
-  <h3 align="center">ascii-webcam</h3>
+  <h3 align="center">2D-Raycasting</h3>
 
   <p align="center">
-    Transform webcam frames to ascii art.
+    Simple 2D-Raycasting simulation with pygame.
     <br />
-    <a href="https://github.com/janthmueller/ascii-webcam"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/janthmueller/2D-Raycasting"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/janthmueller/ascii-webcam">View Demo</a>
+    <a href="https://github.com/janthmueller/2D-Raycasting">View Demo</a>
     ·
-    <a href="https://github.com/janthmueller/ascii-webcam/issues">Report Bug</a>
+    <a href="https://github.com/janthmueller/2D-Raycasting/issues">Report Bug</a>
     ·
-    <a href="https://github.com/janthmueller/ascii-webcam/issues">Request Feature</a>
+    <a href="https://github.com/janthmueller/2D-Raycasting/issues">Request Feature</a>
   </p>
 </div>
 
@@ -62,8 +62,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-Transform webcam frames to ascii art. A simple implementation with a GUI.  
+Draw lines or boundaries and move a light source to observe the rays.
 
 ![Product Name Screen Shot][product-screenshot]
 
@@ -76,45 +75,47 @@ Transform webcam frames to ascii art. A simple implementation with a GUI.
 
 Major frameworks/libraries used to bootstrap the project. 
 
-* [cv2](https://github.com/opencv/opencv-python)
-* [PyQt5](https://doc.qt.io/)
-* [pyvirtualcam](https://github.com/letmaik/pyvirtualcam)
-
+* [Pygame](https://pygame.readthedocs.io/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
 ### Prerequisites
+
+See `requirements.txt` for more information.
+
 ### Installation
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use the Slider to change the size of displayed letters.  
-Use the Buttons to switch between multiple display modes:  
-  - single color
-  - single color with brightness
-  - color map (jet)
-  - real color  
+Mouse:  
+* Left mouse button:  
+  Draw lines/boundaries
+* Right mouse button:  
+  Set/move light source
+* Mouse wheel:  
+  Increase/decrease number of rays 
 
-Use the line edit field to change the displayed letters. 
-The letters used are displayed in terms of their order over the luminance on the image. 
-
+Keys:  
+* Key b:  
+  Add/Remove invisible lines/boundaries at the edge of the window
+* Key h:
+  Hide/reveal the drawn lines
+* Key z:
+  Delete last drawn line
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Refactor Code
-- [ ] Fix shields in readme
+- [ ] Class for ray
+- [ ] Decouple ray intersection algorithm from draw method (still quite dirty)
+- [ ] Improve ray intersection algorithm
+- [ ] Add argparser
 
-
-See the [open issues](https://github.com/janthmueller/ascii-webcam/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/janthmueller/2D-Raycasting/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -148,7 +149,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Jan Thomas Müller
 
-Project Link: [https://github.com/janthmueller/ascii-webcam](https://github.com/janthmueller/ascii-webcam)
+Project Link: [https://github.com/janthmueller/2D-Raycasting](https://github.com/janthmueller/2D-Raycasting)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -158,8 +159,8 @@ Project Link: [https://github.com/janthmueller/ascii-webcam](https://github.com/
 ## Acknowledgments
 
 
-* [Embed An OpenCV Video Feed In A PyQt Window Using QThread](https://www.youtube.com/watch?v=dTDgbx-XelY&ab_channel=SamiHatna)
-* [ASCII Art of Live Webcam Stream with OpenCV](https://www.learnpythonwithrune.org/ascii-art-of-live-webcam-stream-with-opencv/)
+* [Project idea from Coding Train](https://www.youtube.com/watch?v=TOEi6T2mtHo&ab_channel=TheCodingTrain)
+
 
 
 
@@ -169,22 +170,15 @@ Project Link: [https://github.com/janthmueller/ascii-webcam](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/janthmueller/ascii-webcam.svg?style=for-the-badge
-[contributors-url]: https://github.com/janthmueller/ascii-webcam/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/janthmueller/ascii-webcam.svg?style=for-the-badge
-[forks-url]: https://github.com/janthmueller/ascii-webcam/network/members
-[stars-shield]: https://img.shields.io/github/stars/janthmueller/ascii-webcam.svg?style=for-the-badge
-[stars-url]: https://github.com/janthmueller/ascii-webcam/stargazers/
-[issues-shield]: https://img.shields.io/github/issues/janthmueller/ascii-webcam.svg?style=for-the-badge
-[issues-url]: https://github.com/janthmueller/ascii-webcam/issues
-[license-shield]: https://img.shields.io/github/license/janthmueller/ascii-webcam.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/janthmueller/2D-Raycasting.svg?style=for-the-badge
+[contributors-url]: https://github.com/janthmueller/2D-Raycasting/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/janthmueller/2D-Raycasting.svg?style=for-the-badge
+[forks-url]: https://github.com/janthmueller/2D-Raycasting/network/members
+[stars-shield]: https://img.shields.io/github/stars/janthmueller/2D-Raycasting.svg?style=for-the-badge
+[stars-url]: https://github.com/janthmueller/2D-Raycasting/stargazers/
+[issues-shield]: https://img.shields.io/github/issues/janthmueller/2D-Raycasting.svg?style=for-the-badge
+[issues-url]: https://github.com/janthmueller/2D-Raycasting/issues
+[license-shield]: https://img.shields.io/github/license/janthmueller/2D-Raycasting.svg?style=for-the-badge
 [license-url]: https://opensource.org/licenses/MIT
-[product-screenshot]: ascii-webcam.png 
+[product-screenshot]: images/2D-Raycasting.png 
 
-# 2D-Raycasting
-Simple 2D-Raycasting simulation with pygame.
-
-TBD:  
-* class for ray
-* decouple ray intersection algorithm from draw method (still quite dirty)
-* improve ray intersection algorithm
