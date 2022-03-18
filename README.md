@@ -108,9 +108,9 @@ Keys:
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Class for ray
-- [ ] Decouple ray intersection algorithm from draw method (still quite dirty)
-- [ ] Improve ray intersection algorithm
+- [x] Class for ray
+- [x] Decouple ray intersection algorithm from draw method (still quite dirty)
+- [x] Improve ray intersection algorithm
 - [ ] Add argparser
 
 See the [open issues](https://github.com/janthmueller/2D-Raycasting/issues) for a full list of proposed features (and known issues).
