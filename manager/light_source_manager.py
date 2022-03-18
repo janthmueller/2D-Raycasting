@@ -1,5 +1,5 @@
 def init_light_source_manager():
-    LightSourceManager.source = ()
+    LightSourceManager.light_source_pos = ()
     LightSourceManager.ray_num = 100
     LightSourceManager.max_ray_num = 500
     LightSourceManager.min_ray_num = 4
@@ -8,13 +8,13 @@ def init_light_source_manager():
 class LightSourceManager:
     @property
     @staticmethod
-    def source(self):
-        return self.__source
+    def light_source_pos(self):
+        return self.__light_source_pos
 
-    @source.setter
+    @light_source_pos.setter
     @staticmethod
-    def source(self, value):
-        self.__source = value
+    def light_source_pos(self, value):
+        self.__light_source_pos = value
 
     @property
     @staticmethod
