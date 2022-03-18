@@ -1,29 +1,29 @@
 def init_line_segment_manager():
-    LineSegmentManager.ghost_line = []
-    LineSegmentManager.bound_lines = []
+    LineSegmentManager.temp_line = []
+    LineSegmentManager.settled_lines = []
     LineSegmentManager.outer_bound_lines = []
 
 
 class LineSegmentManager:
     @property
     @staticmethod
-    def ghost_line(self):
-        return self.__ghost_line
+    def temp_line(self):
+        return self.__temp_line
 
-    @ghost_line.setter
+    @temp_line.setter
     @staticmethod
-    def ghost_line(self, value):
-        self.__ghost_line = value
+    def temp_line(self, value):
+        self.__temp_line = value
 
     @property
     @staticmethod
-    def bound_lines(self):
-        return self.__bound_lines
+    def settled_lines(self):
+        return self.__settled_lines
 
-    @bound_lines.setter
+    @settled_lines.setter
     @staticmethod
-    def bound_lines(self, value):
-        self.__bound_lines = value
+    def settled_lines(self, value):
+        self.__settled_lines = value
 
     @property
     @staticmethod
