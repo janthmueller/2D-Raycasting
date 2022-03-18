@@ -1,11 +1,10 @@
+def init_line_segment_manager():
+    LineSegmentManager.ghost_line = []
+    LineSegmentManager.bound_lines = []
+    LineSegmentManager.outer_bound_lines = []
 
-def init_bound_manager():
-    BoundManager.ghost_line = []
-    BoundManager.bound_lines = []
-    BoundManager.outer_bound_lines = []
 
-
-class BoundManager:
+class LineSegmentManager:
     @property
     @staticmethod
     def ghost_line(self):

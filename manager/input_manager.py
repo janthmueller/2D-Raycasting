@@ -2,6 +2,7 @@ def init_input_manager():
     InputManager.h_key = False
     InputManager.b_key = False
 
+
 class InputManager:
     @property
     @staticmethod
