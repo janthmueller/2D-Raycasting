@@ -8,29 +8,24 @@ from manager import *
 from light_source import LightSource
 
 
-def draw_ghost_line(screen):
-    if len(LineSegmentManager.ghost_line) != 0:
+def draw_temp_line(screen):
+    if len(LineSegmentManager.temp_line) != 0:
         pygame.draw.line(
             screen,
             (255, 255, 255),
-            LineSegmentManager.ghost_line[0],
-            LineSegmentManager.ghost_line[1],
+            LineSegmentManager.temp_line[0],
+            LineSegmentManager.temp_line[1],
             2,
         )
-    else:
-        pass
 
 
-def draw_bound_lines(screen):
-    for b_line in LineSegmentManager.bound_lines:
+def draw_settled_lines(screen):
+    for b_line in LineSegmentManager.settled_lines:
         pygame.draw.line(screen, (255, 255, 255), b_line[0], b_line[1], 2)
 
 
 def main():
-    init_input_manager()
-    init_screen_manager()
-    init_light_source_manager()
-    init_line_segment_manager()
+    init_manager()
     pygame.display.set_caption("2D Raycasting")
     screen = pygame.display.set_mode(
         (ScreenManager.screen_width, ScreenManager.screen_height)
@@ -38,16 +33,16 @@ def main():
     light_source = LightSource(10, (0, 2 * np.pi), 100)
     while True:
         screen.fill((0, 0, 0))
-        draw_ghost_line(screen)
+        draw_temp_line(screen)
         if not InputManager.h_key:
-            draw_bound_lines(screen)
-        if len(LightSourceManager.source) == 2:
-            light_source.position = LightSourceManager.source
+            draw_settled_lines(screen)
+        if len(LightSourceManager.light_source_pos) == 2:
+            light_source.position = LightSourceManager.light_source_pos
             light_source.num_rays = LightSourceManager.ray_num
             light_source.draw_light_source(screen)
             light_source.draw_rays(
                 screen,
-                LineSegmentManager.bound_lines + LineSegmentManager.outer_bound_lines,
+                LineSegmentManager.settled_lines + LineSegmentManager.outer_bound_lines,
             )
         for event in pygame.event.get():
             EventHandler.notify(event)

@@ -36,7 +36,7 @@ def on_mouse_button_down(event):
         InputManager.left_down = pygame.mouse.get_pos()
     if event.button == 3:
         InputManager.right_down = pygame.mouse.get_pos()
-        LightSourceManager.source = ()
+        LightSourceManager.light_source_pos = ()
     if event.button == 4:
         LightSourceManager.ray_num += 2
         LightSourceManager.ray_num = min(
@@ -53,25 +53,25 @@ def on_mouse_button_down(event):
 def on_mouse_button_up(event):
     if event.button == 1:
         InputManager.left_up = pygame.mouse.get_pos()
-        LineSegmentManager.bound_lines.append(
+        LineSegmentManager.settled_lines.append(
             (InputManager.left_down, InputManager.left_up)
         )
     if event.button == 3:
         InputManager.right_up = pygame.mouse.get_pos()
-        LightSourceManager.source = InputManager.right_up
+        LightSourceManager.light_source_pos = InputManager.right_up
 
 
 @EventHandler.register(pygame.MOUSEMOTION)
 def on_mouse_motion(event):
     if left_key_down(event):
         InputManager.left_last = pygame.mouse.get_pos()
-        LineSegmentManager.ghost_line = [InputManager.left_down, InputManager.left_last]
+        LineSegmentManager.temp_line = [InputManager.left_down, InputManager.left_last]
     else:
-        LineSegmentManager.ghost_line = []
+        LineSegmentManager.temp_line = []
 
     if right_key_down(event):
         InputManager.right_last = pygame.mouse.get_pos()
-        LightSourceManager.source = InputManager.right_last
+        LightSourceManager.light_source_pos = InputManager.right_last
 
 
 @EventHandler.register(pygame.KEYDOWN)
@@ -100,7 +100,7 @@ def on_key_down(event):
                 ),
             ]
     if event.key == pygame.K_z:
-        LineSegmentManager.bound_lines = LineSegmentManager.bound_lines[:-1]
+        LineSegmentManager.settled_lines = LineSegmentManager.settled_lines[:-1]
 
 
 def left_key_down(event):
