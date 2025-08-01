@@ -1,7 +1,4 @@
 <div id="top"></div>
-
-<!-- PROJECT LOGO -->
-<br />
 <div align="center">
 
   <h3 align="center">2D-Raycasting</h3>
