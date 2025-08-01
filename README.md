@@ -1,15 +1,5 @@
 <div id="top"></div>
 
-<!-- PROJECT SHIELDS -->
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -81,15 +71,19 @@ Major frameworks/libraries used to bootstrap the project.
 
 <!-- GETTING STARTED -->
 ## Getting Started
-### Prerequisites
-
-See `requirements.txt` for more information.
 
 ### Installation
-
+```bash
+git clone https://github.com/janthmueller/2D-Raycasting.git
+cd 2D-Raycasting
+pip install -r requirements.txt
+```
 <!-- USAGE EXAMPLES -->
 ## Usage
-
+Start:
+```bash
+python raycasting.py
+```
 Mouse:  
 * Left mouse button:  
   Draw lines/boundaries
@@ -105,15 +99,6 @@ Keys:
   Hide/reveal the drawn lines
 * Key z:
   Delete last drawn line
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Class for ray
-- [x] Decouple ray intersection algorithm from draw method (still quite dirty)
-- [x] Improve ray intersection algorithm
-- [ ] Add argparser
-
-See the [open issues](https://github.com/janthmueller/2D-Raycasting/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -157,28 +142,9 @@ Project Link: [https://github.com/janthmueller/2D-Raycasting](https://github.com
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
-
 * [Project idea from Coding Train](https://www.youtube.com/watch?v=TOEi6T2mtHo&ab_channel=TheCodingTrain)
-
-
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/janthmueller/2D-Raycasting.svg?style=for-the-badge
-[contributors-url]: https://github.com/janthmueller/2D-Raycasting/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/janthmueller/2D-Raycasting.svg?style=for-the-badge
-[forks-url]: https://github.com/janthmueller/2D-Raycasting/network/members
-[stars-shield]: https://img.shields.io/github/stars/janthmueller/2D-Raycasting.svg?style=for-the-badge
-[stars-url]: https://github.com/janthmueller/2D-Raycasting/stargazers/
-[issues-shield]: https://img.shields.io/github/issues/janthmueller/2D-Raycasting.svg?style=for-the-badge
-[issues-url]: https://github.com/janthmueller/2D-Raycasting/issues
-[license-shield]: https://img.shields.io/github/license/janthmueller/2D-Raycasting.svg?style=for-the-badge
-[license-url]: https://opensource.org/licenses/MIT
 [product-screenshot]: images/2D-Raycasting.png 
 
